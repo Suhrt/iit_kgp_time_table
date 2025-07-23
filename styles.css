@@ -109,7 +109,7 @@ table {
   min-width: 900px;
 }
 
-caption {
+.caption {
   margin: 1rem 0;
   text-align: center;
 }
