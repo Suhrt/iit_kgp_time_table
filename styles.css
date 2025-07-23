@@ -1,0 +1,185 @@
+/* General Reset and Body */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: linear-gradient(to right, #f9fafb, #e0e7ff);
+  color: #1e293b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+/* Link Card Grid */
+.link-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s ease;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #1e293b;
+  position: relative;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 0 0 #6366f1;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.card:hover {
+  transform: translateY(-4px) scale(1.03);
+  color: #4f46e5;
+}
+
+.card:hover::after {
+  box-shadow: inset 0 0 0 3px #6366f1;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .card {
+    padding: 1.5rem 2rem;
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Timetable Table Styles */
+/* Timetable enhancements */
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 900px;
+}
+
+caption {
+  margin: 1rem 0;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: center;
+  min-width: 100px;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  background-color: #f1f5f9;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+tbody td:first-child,
+thead th:first-child {
+  position: sticky;
+  left: 0;
+  background-color: #f8fafc;
+  z-index: 1;
+  font-weight: 600;
+}
+
+tbody td:first-child {
+  background-color: #f9fbff;
+}
+
+/* ──────────────── Subject Color Codes ──────────────── */
+
+/* Evidence Based Medicine */
+.ebm {
+  background-color: #e3f2fd; /* Soft Blue */
+}
+
+/* Digital Image Processing */
+.dipa {
+  background-color: #e6f4ea; /* Soft Green */
+}
+
+/* Nano-Pharmaceuticals */
+.nano {
+  background-color: #ffe8ee; /* Soft Pink */
+}
+
+/* Digital Speech Processing */
+.dsp {
+  background-color: #fff9db; /* Soft Yellow */
+}
+
+/* Advanced Biomaterials */
+.ab {
+  background-color: #f0e7ff; /* Soft Purple */
+}
+
+/* Medical Instrumentation Lab */
+.lab {
+  background-color: #ffeef1; /* Pale Rose */
+}
+
+/* Fundamentals of Medical Instruments */
+.fmi {
+  background-color: #e6f7fb; /* Soft Cyan */
+}
+
+/* Seminar-II */
+.seminar {
+  background-color: #fbeaf3; /* Soft Lavender Pink */
+}
+
+
+@media screen and (max-width: 768px) {
+  table {
+    font-size: 0.85rem;
+  }
+}
